@@ -1,0 +1,254 @@
+:root {
+    --primary-red: #D40000;
+    --secondary-red: #ff0000ab;
+    --black: #1A1A1A;
+    --yellow: #FFD700;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+}
+
+header {
+    background-color: var(--black);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--yellow);
+}
+
+.hero {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+
+.services {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-red);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.service-card {
+    padding: 2rem;
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-red);
+}
+
+.gallery {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-red);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.10);
+}
+
+.contact {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--yellow);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--yellow);
+}
+
+.contact-item p {
+    margin-bottom: 0.5rem;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+.team {
+    padding: 4rem 2rem;
+    background-color: var(--black);
+}
+
+.team h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--yellow);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    color: var(--white);
+}
+
+.team-member img {
+    width: 90%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--yellow);
+}
+
+.team-member h3 {
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .services-grid,
+    .gallery-grid,
+    .contact-info,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        margin-bottom: 2rem;
+    }
+}
